@@ -11,7 +11,7 @@ const authenticateToken = (req, res, next) => {
       .json({ message: "Access denied. No token provided." });
   }
 
-  jwt.verify(token, "jhdhf", (err, user) => {
+  jwt.verify(token, process.env.JWT_TOKEN, (err, user) => {
     if (err) {
       return res.status(403).json({ message: "Invalid token." });
     }
