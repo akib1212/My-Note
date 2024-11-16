@@ -7,7 +7,7 @@ const UserAPI = require("./routes/user.js");
 const TaskAPI = require("./routes/task.js");
 
 app.use(cors({
-  origin: 'https://extraordinary-licorice-e1d4d6.netlify.app', // Allow only this origin
+  origin: 'https://keepnotecom.netlify.app', // Allow only this origin
 }));
 app.use(express.json());
 app.use("/api/v1", UserAPI);
